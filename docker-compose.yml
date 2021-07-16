@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  django_cars_api:
+    # Build the Dockerfile in this directory.
+    build: .
+    stdin_open: true
+    tty: true
+    # Make all commands relative to our application directory
+    working_dir: /DjangoCarsApi/project
+
+    # Set some environment variables to be used in the application
+
+    # The process that runs in the container.
+    command: python manage.py runserver 0.0.0.0:8000
+
+    # Make the port available on the host machine
+    # so that we can navigate there with our web browser.
+    ports:
+      - '8000:8000'

@@ -16,3 +16,5 @@
 djangorestframework==3.12.4
 Markdown==3.3.4
 django-filter==2.4.0
+requests==2.22.0
+gunicorn==20.0.4
